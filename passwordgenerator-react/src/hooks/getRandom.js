@@ -5,6 +5,6 @@ export function getRandomChracter(min,max) {
 }
 
 export function getRandomSymbol() {
-    const pattern = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~'"
-    return [Math.floor(Math.random * pattern.length)]
+    const pattern = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~'";
+    return pattern[Math.floor(Math.random() * pattern.length)]
 }

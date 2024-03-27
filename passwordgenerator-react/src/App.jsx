@@ -17,22 +17,22 @@ function App() {
     chracters: 6,
     minus: true,
     mayus: true,
-    number: true,
-    symbols: true
+    number: false,
+    symbols: false
   })
 
   const fieldsOfArray = [
     {
       field: values.minus,
-      getChar: () => getRandomChracter(65, 90)
-    },
-    {
-      field: values.mayus,
       getChar: () => getRandomChracter(97, 122)
     },
     {
+      field: values.mayus,
+      getChar: () => getRandomChracter(65, 90)
+    },
+    {
       field: values.number,
-      getChar: () => getRandomChracter(45, 57)
+      getChar: () => getRandomChracter(48, 57)
     },
     {
       field: values.symbols,
@@ -86,12 +86,12 @@ function App() {
             <input type="number" min={6} max={12} value={values.chracters} onChange={setValues} name="chracters" id="chracters" className="bg-gray-800 text-gray-500 text-center rounded-md border-2 border-gray-600 w-12 outline-none" />
           </div>
           <div className="flex justify-between items-center">
-            <label htmlFor="mayus" className="bg-gray-800 p-2 text-gray-400 rounded-md">Mayúsculas</label>
-            <input type="checkbox" name="mayus" checked={values.minus} onChange={setValues} id="mayus" className="w-8 h-8" />
+            <label htmlFor="minus" className="bg-gray-800 p-2 text-gray-400 rounded-md">Minúsculas</label>
+            <input type="checkbox" name="minus" checked={values.minus} onChange={setValues} id="minus" className="w-8 h-8" />
           </div>
           <div className="flex justify-between items-center">
-            <label htmlFor="minus" className="bg-gray-800 p-2 text-gray-400 rounded-md">Minúsculas</label>
-            <input type="checkbox" name="minus" checked={values.mayus} onChange={setValues} id="minus" className="w-8 h-8" />
+            <label htmlFor="mayus" className="bg-gray-800 p-2 text-gray-400 rounded-md">Mayúsculas</label>
+            <input type="checkbox" name="mayus" checked={values.mayus} onChange={setValues} id="mayus" className="w-8 h-8" />
           </div>
           <div className="flex justify-between items-center">
             <label htmlFor="number" className="bg-gray-800 p-2 text-gray-400 rounded-md">Números</label>
