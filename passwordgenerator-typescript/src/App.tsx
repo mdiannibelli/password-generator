@@ -1,4 +1,4 @@
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CopyIcon from './components/icons/CopyIcon';
 import useForm from './hooks/useForm';
